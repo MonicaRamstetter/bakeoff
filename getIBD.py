@@ -93,8 +93,10 @@ for run in range(0,3):
   IBD = open(args.f[run],'r') #open file containing refindIBD output
   for line in IBD:
     l = str.split(line.rstrip())
-    ind1 = str.split(str(l[0]),"_")[0]
-    ind2 = str.split(str(l[2]),"_")[0]
+    #ind1 = str.split(str(l[0]),"_")[0]
+    #ind2 = str.split(str(l[2]),"_")[0]
+    ind1 = l[0]
+    ind2 = l[2]
     h1 = float(l[1])-1 #change homologue values to 0,1 for easier manipulation
     h2 = float(l[3])-1
     if 'chr' in l[4]:
