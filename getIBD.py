@@ -97,7 +97,10 @@ for run in range(0,3):
     ind2 = str.split(str(l[2]),"_")[0]
     h1 = float(l[1])-1 #change homologue values to 0,1 for easier manipulation
     h2 = float(l[3])-1
-    chr = int(str.split(l[4],'chr')[1])
+    if 'chr' in l[4]:
+      chr = int(str.split(l[4],'chr')[1])
+    else:
+      chr = int(l[4])
     if ind1 > ind2: #want ind1 < ind2
       tmp = ind1
       ind1 = ind2
