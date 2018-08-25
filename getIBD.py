@@ -177,7 +177,7 @@ for chr in range(1,23):
   total_genome = total_genome + chr_ends[chr][1] - chr_ends[chr][0]
 
 
-
+print("Total genome length: "+str(total_genome)+"\n")
 
 
 IBD1_all = {} #collection of IBD1 segments from each of the three runs
