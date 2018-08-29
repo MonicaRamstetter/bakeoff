@@ -341,9 +341,9 @@ for ind1 in IBDseg_all.keys():
                 for ibdseg in IBD2_all[ind1][ind2][chr]:
                     IBD_lengths[ind1][ind2][1] += (ibdseg[1] - ibdseg[0]) #add segment length
 
-            if args.t[0] == 1:
-                IBD_lengths[ind1][ind2][0] /= total_genome
-                IBD_lengths[ind1][ind2][1] /= total_genome
+        if args.t[0] == 1:
+            IBD_lengths[ind1][ind2][0] /= total_genome
+            IBD_lengths[ind1][ind2][1] /= total_genome
 
 outfile_IBD = open(args.o[0] + '.ibd12', 'w')
 for ind1 in IBD_lengths.keys():
